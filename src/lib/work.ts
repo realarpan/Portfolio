@@ -9,8 +9,8 @@ const work = [
     description:
       "Unified api for 10+ providers and 300+ LLM models with a single API key and a single endpoint.",
     achievements: [
-      "Developed backend services in Go powering the native macOS application"
-      "Architected microservices with NATS for inter-service messaging"
+      "Developed backend services in Go powering the native macOS application",
+      "Architected microservices with NATS for inter-service messaging",
     ],
     status: "current",
   },
