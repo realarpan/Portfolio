@@ -47,18 +47,16 @@ export default function Home() {
 
               <div className="space-y-2 mb-6">
                 <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold">
-                  I&apos;m Gaurav,
+                  I&apos;m Arpan,
                 </h2>
                 <h3 className="text-[#00E676] text-2xl sm:text-3xl lg:text-4xl font-bold">
-                  Software Engineer
+                  Backend Engineer
                 </h3>
                 <p className="text-white text-lg sm:text-xl">Based in India.</p>
               </div>
 
               <p className="text-white text-base sm:text-lg leading-relaxed max-w-3xl">
-                tldr; i code the web, do some devops, wire up ai agents, and
-                make workflows click. scalability, reliability, and a bit of
-                chaos engineering.
+                I build fast, scalable systems. Low-level infrastructure, performance optimization, and production-ready tools.
               </p>
             </div>
 
@@ -124,7 +122,7 @@ export default function Home() {
                 <div className="bg-[#1A1A1A] rounded-xl border border-gray-600/50 p-6 shadow-lg">
                   <div className="overflow-x-auto">
                     <GitHubCalendar
-                      username="Xinacy"
+                      username="realarpan"
                       blockSize={12}
                       blockMargin={3}
                       colorScheme="dark"
@@ -169,7 +167,7 @@ export default function Home() {
                       asChild
                     >
                       <Link
-                        href="https://github.com/Xinacy"
+                        href="https://github.com/realarpan"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2"
@@ -197,7 +195,7 @@ export default function Home() {
                     asChild
                   >
                     <Link
-                      href="https://github.com/Xinacy/Portfolio"
+                      href="https://github.com/realarpan/Portfolio"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-2"
@@ -211,7 +209,7 @@ export default function Home() {
                 <div className="flex items-center justify-center gap-1 text-gray-500 text-sm">
                   <span>Made with</span>
                   <Heart className="size-4 text-red-500 hover:fill-current hover:cursor-pointer" />
-                  <span>by Gaurav</span>
+                  <span>by Gaurav & Edited by Arpan</span>
                 </div>
               </div>
             </footer>
@@ -237,13 +235,13 @@ function ProfileCardContent() {
       </div>
 
       <div className="text-center mb-6">
-        <h2 className="text-xl sm:text-2xl font-bold">Gaurav</h2>
+        <h2 className="text-xl sm:text-2xl font-bold">Arpan</h2>
       </div>
 
       <div className="flex justify-center gap-3 mb-6">
         <Button variant="outline" className="size-10" asChild>
           <Link
-            href="https://instagram.com/Xinacy_7"
+            href="https://instagram.com/invalid"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -252,7 +250,7 @@ function ProfileCardContent() {
         </Button>
         <Button variant="outline" className="size-10" asChild>
           <Link
-            href="https://x.com/Xinacy"
+            href="https://x.com/invalid"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -261,7 +259,7 @@ function ProfileCardContent() {
         </Button>
         <Button variant="outline" className="size-10" asChild>
           <Link
-            href="https://github.com/Xinacy"
+            href="https://github.com/realarpan"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -270,7 +268,7 @@ function ProfileCardContent() {
         </Button>
         <Button variant="outline" className="size-10" asChild>
           <Link
-            href="https://linkedin.com/in/Xinacy"
+            href="https://linkedin.com/in/invalid"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -279,7 +277,7 @@ function ProfileCardContent() {
         </Button>
         <Button variant="outline" className="size-10" asChild>
           <Link
-            href="https://discord.com/users/1211202988518146050"
+            href="https://discord.com/users/invalid"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -300,7 +298,7 @@ function ProfileCardContent() {
           </Link>
         </Button>
         <Button className="bg-[#00E676] text-black hover:bg-[#00D166]" asChild>
-          <Link href="mailto:gaurav@xinacy.com">
+          <Link href="mailto:arpan@arpanx.vercel.app">
             <Send className="size-4" />
             Contact Me
           </Link>
