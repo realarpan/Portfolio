@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 };
 
 export default function ResumePage() {
-  const resumeUrl = "https://cdn.xinacy.com/resume.pdf";
+  const resumeUrl = "https://arpan-s-resume.tiiny.site";
 
   return (
     <div className="min-h-screen bg-black pb-28">
