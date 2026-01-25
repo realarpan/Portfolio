@@ -2,13 +2,16 @@ const work = [
   {
     company: "MegaLLM",
     logo: "megallm.png",
-    position: "Senior Backend Engineer",
+    position: "Junior Backend Engineer",
     duration: "December 2025 - Present",
     type: "Full-Time",
     location: "Remote (BLR, India)",
     description:
       "Unified api for 10+ providers and 300+ LLM models with a single API key and a single endpoint.",
-    achievements: ["will update soon..."],
+    achievements: [
+      "Developed backend services in Go powering the native macOS application"
+      "Architected microservices with NATS for inter-service messaging"
+    ],
     status: "current",
   },
   {
