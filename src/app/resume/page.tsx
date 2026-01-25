@@ -81,11 +81,11 @@ export default function ResumePage() {
                 <MapPin className="size-4 text-gray-400" /> India
               </span>
               <a
-                href="mailto:gaurav@xinacy.com"
+                href="mailto:arpanmaity@gmail.com"
                 className="flex items-center gap-1 hover:text-white transition-colors"
               >
                 <Mail className="size-4 text-gray-400" />
-                arpanx.vercel.app
+                arpanmaity@gmail.com
               </a>
               <a
                 href="https://linkedin.com/in/invalid"
@@ -97,7 +97,7 @@ export default function ResumePage() {
               </a>
               <span className="flex items-center gap-1">
                 <Globe className="w-4 h-4 text-gray-400" />
-                xinacy.com
+                arpanx.vercel.app
               </span>
             </div>
           </div>
