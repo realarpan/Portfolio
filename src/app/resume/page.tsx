@@ -14,8 +14,8 @@ import { Metadata } from "next";
 import work from "@/lib/work";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://xinacy.com/"),
-  title: "Resume | Gaurav",
+  metadataBase: new URL("https://arpanx.vercel.app"),
+  title: "Resume | Arpan",
   description: "i have a resume but pdfs are boring",
   icons: {
     icon: ["/favicon.ico"],
@@ -24,15 +24,15 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://xinacy.com/",
-    title: "Resume | Gaurav",
+    url: "https://arpanx.vercel.app/",
+    title: "Resume | Arpan",
     description: "i have a resume but pdfs are boring",
   },
   twitter: {
     card: "summary",
-    title: "Resume | Gaurav",
+    title: "Resume | Arpan",
     description: "i have a resume but pdfs are boring",
-    creator: "@Xinacy",
+    creator: "@Arpan",
   },
 };
 
@@ -75,7 +75,7 @@ export default function ResumePage() {
 
         <div className="max-w-4xl mx-auto bg-black text-white rounded-lg shadow-2xl p-8 md:p-12 border border-gray-700">
           <div className="text-center mb-8">
-            <h1 className="text-5xl font-bold mb-4 text-white">Gaurav</h1>
+            <h1 className="text-5xl font-bold mb-4 text-white">Arpan</h1>
             <div className="flex flex-wrap justify-center items-center gap-4 text-sm text-gray-300">
               <span className="flex items-center gap-1">
                 <MapPin className="size-4 text-gray-400" /> India
@@ -85,15 +85,15 @@ export default function ResumePage() {
                 className="flex items-center gap-1 hover:text-white transition-colors"
               >
                 <Mail className="size-4 text-gray-400" />
-                gaurav@xinacy.com
+                arpanx.vercel.app
               </a>
               <a
-                href="https://linkedin.com/in/Xinacy"
+                href="https://linkedin.com/in/invalid"
                 target="_blank"
                 className="flex items-center gap-1 hover:text-white transition-colors"
               >
                 <Linkedin className="w-4 h-4 text-gray-400" />
-                in/Xinacy
+                in/Arpan
               </a>
               <span className="flex items-center gap-1">
                 <Globe className="w-4 h-4 text-gray-400" />
@@ -157,10 +157,10 @@ export default function ResumePage() {
             </h2>
             <div>
               <h3 className="text-xl font-bold text-white">
-                Bachelor of Technology in Computer Science (AI & ML)
+                PRIVATE & CONFIDENTIAL
               </h3>
               <p className="text-gray-400">
-                Maharshi Dayanand University · Haryana · 2026
+                High School · Kolkata · 2025
               </p>
             </div>
           </section>
