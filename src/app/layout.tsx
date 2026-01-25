@@ -19,8 +19,8 @@ const fontSans = FontSans({
 export const viewport: Viewport = { themeColor: "#00E676" };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://xinacy.com/"),
-  title: "Intro | Gaurav",
+  metadataBase: new URL("https://arpanx.vercel.app"),
+  title: "Intro | Arpan",
   description: "yet another swe portfolio on the internet",
   icons: {
     icon: ["/favicon.ico"],
@@ -29,15 +29,15 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://xinacy.com/",
-    title: "Intro | Gaurav",
+    url: "https://arpanx.vercel.app",
+    title: "Intro | Arpan",
     description: "yet another swe portfolio on the internet",
   },
   twitter: {
     card: "summary",
-    title: "Intro | Gaurav",
+    title: "Intro | Arpan",
     description: "yet another swe portfolio on the internet",
-    creator: "@Xinacy",
+    creator: "@Arpan",
   },
 };
 
@@ -73,7 +73,7 @@ export default async function RootLayout({
       icon: (
         <Mail className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "mailto:gaurav@xinacy.com",
+      href: "mailto:arpanx.vercel.app",
     },
   ];
 
