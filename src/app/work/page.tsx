@@ -7,8 +7,8 @@ import { work } from "@/lib/resume";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://xinacy.com/"),
-  title: "Work Experience | Gaurav",
+  metadataBase: new URL("https://arpanx.vercel.app/"),
+  title: "Work Experience | Arpan",
   description: "i worked at some cool places i believe so",
   icons: {
     icon: ["/favicon.ico"],
@@ -17,13 +17,13 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://xinacy.com/",
-    title: "Work Experience | Gaurav",
+    url: "https://arpanx.vercel.app/",
+    title: "Work Experience | Arpan",
     description: "i worked at some cool places i believe so",
   },
   twitter: {
     card: "summary",
-    title: "Work Experience | Gaurav",
+    title: "Work Experience | Arpan",
     description: "i worked at some cool places i believe so",
     creator: "@Xinacy",
   },
