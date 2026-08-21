@@ -6,7 +6,7 @@ import { useState } from "react";
 
 export default function DownloadButton() {
   const [isDownloading, setIsDownloading] = useState(false);
-  const resumeUrl = "https://cdn.xinacy.com/resume.pdf";
+  const resumeUrl = "https://cdn.arpan.indevs.in/resume.pdf";
 
   async function handleDownload() {
     setIsDownloading(true);
@@ -15,7 +15,7 @@ export default function DownloadButton() {
     const url = window.URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = "Gaurav's Resume.pdf";
+    link.download = "Arpan's Resume.pdf";
     link.click();
     window.URL.revokeObjectURL(url);
     setIsDownloading(false);
