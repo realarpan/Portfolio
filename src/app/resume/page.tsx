@@ -7,8 +7,8 @@ import { Metadata } from "next";
 import { work, skills, summary } from "@/lib/resume";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://xinacy.com/"),
-  title: "Resume | Gaurav",
+  metadataBase: new URL("https://arpanx.vercel.app/"),
+  title: "Resume | Arpan",
   description: "i have a resume but pdfs are boring",
   icons: {
     icon: ["/favicon.ico"],
@@ -17,20 +17,20 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://xinacy.com/",
-    title: "Resume | Gaurav",
+    url: "https://arpanx.vercel.app/",
+    title: "Resume | Arpan",
     description: "i have a resume but pdfs are boring",
   },
   twitter: {
     card: "summary",
-    title: "Resume | Gaurav",
+    title: "Resume | Arpan",
     description: "i have a resume but pdfs are boring",
     creator: "@Xinacy",
   },
 };
 
 export default function ResumePage() {
-  const resumeUrl = "https://cdn.xinacy.com/resume.pdf";
+  const resumeUrl = "https://cdn.arpan.indevs.in/resume.pdf";
 
   return (
     <div className="min-h-screen bg-black pb-28">
@@ -55,29 +55,29 @@ export default function ResumePage() {
 
         <div className="max-w-4xl mx-auto bg-black text-white rounded-lg shadow-2xl p-8 md:p-12 border border-gray-700">
           <div className="text-center mb-8">
-            <h1 className="text-5xl font-bold mb-4 text-white">Gaurav</h1>
+            <h1 className="text-5xl font-bold mb-4 text-white">Arpan</h1>
             <div className="flex flex-wrap justify-center items-center gap-4 text-sm text-gray-300">
               <span className="flex items-center gap-1">
                 <MapPin className="size-4 text-gray-400" /> India
               </span>
               <a
-                href="mailto:gaurav@xinacy.com"
+                href="mailto:arpanmaity1205@gmail.com"
                 className="flex items-center gap-1 hover:text-white transition-colors"
               >
                 <Mail className="size-4 text-gray-400" />
-                gaurav@xinacy.com
+                arpanmaity1205@gmail.com
               </a>
               <a
-                href="https://linkedin.com/in/Xinacy"
+                href="https://linkedin.com/in/invalid"
                 target="_blank"
                 className="flex items-center gap-1 hover:text-white transition-colors"
               >
                 <Linkedin className="w-4 h-4 text-gray-400" />
-                in/Xinacy
+                in/invalid
               </a>
               <span className="flex items-center gap-1">
                 <Globe className="w-4 h-4 text-gray-400" />
-                xinacy.com
+                arpan.indevs.in
               </span>
             </div>
           </div>
@@ -131,10 +131,10 @@ export default function ResumePage() {
             </h2>
             <div>
               <h3 className="text-xl font-bold text-white">
-                Bachelor of Technology in Computer Science (AI & ML)
+                Confidential
               </h3>
               <p className="text-gray-400">
-                Maharshi Dayanand University · Haryana · 2026
+                High School · Kolkata · 2024
               </p>
             </div>
           </section>
@@ -158,7 +158,7 @@ export default function ResumePage() {
         </div>
 
         <p className="text-center text-xs text-gray-500 mt-4">
-          For the original PDF version, use the download button above.
+          For the original PDF version, don't use the download button above. (instead mail me to receive the same)
         </p>
       </div>
     </div>
