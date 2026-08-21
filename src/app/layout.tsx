@@ -18,8 +18,8 @@ const fontSans = FontSans({
 export const viewport: Viewport = { themeColor: "#00E676" };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://xinacy.com/"),
-  title: "Intro | Gaurav",
+  metadataBase: new URL("https://arpanx.vercel.app/"),
+  title: "Portfolio | Arpan",
   description: "yet another swe portfolio on the internet",
   icons: {
     icon: ["/favicon.ico"],
@@ -28,13 +28,13 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://xinacy.com/",
-    title: "Intro | Gaurav",
+    url: "https://arpanx.vercel.app/",
+    title: "Portfolio | Arpan",
     description: "yet another swe portfolio on the internet",
   },
   twitter: {
     card: "summary",
-    title: "Intro | Gaurav",
+    title: "Portfolio | Arpan",
     description: "yet another swe portfolio on the internet",
     creator: "@Xinacy",
   },
