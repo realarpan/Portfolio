@@ -36,7 +36,7 @@ export default function FloatingDonateButton() {
           <DialogHeader className="text-center mb-4">
             <DialogTitle className="text-lg font-medium text-white flex items-center justify-center gap-2">
               <Heart className="size-4 text-pink-400" />
-              unemployment fund
+              Donate us !
             </DialogTitle>
           </DialogHeader>
 
@@ -47,7 +47,7 @@ export default function FloatingDonateButton() {
               asChild
             >
               <Link
-                href="https://donate.stripe.com/4gM14p365ckW2rp1bY0Ba0a"
+                href="https://buy.stripe.com/test_dRmaEXekqg180ECcuz0x200"
                 target="_blank"
               >
                 <StripeIcon className="size-4 text-[#635BFF]" />
@@ -60,7 +60,7 @@ export default function FloatingDonateButton() {
               className="flex justify-center items-center gap-1 p-3 rounded-lg bg-zinc-900/50 hover:bg-zinc-800/50 transition-all duration-200 w-full"
               asChild
             >
-              <Link href="https://pay.oxapay.com/10489526" target="_blank">
+              <Link href="https://pay.oxapay.com/11638710" target="_blank">
                 <EthereumIcon className="size-4 text-[#627EEA]" />
                 <span className="text-white text-sm font-medium">Crypto</span>
               </Link>
@@ -69,7 +69,7 @@ export default function FloatingDonateButton() {
           </div>
 
           <p className="text-center text-xs text-zinc-500 mt-4">
-            feed my unemployed german shepherd 🐕
+            "No one has ever become poor by giving." — Anne Frank
           </p>
         </div>
       </DialogContent>
@@ -78,8 +78,8 @@ export default function FloatingDonateButton() {
 }
 
 function UPISection() {
-  const upiNumber = "69697007";
-  const upiID = "mysty@upi";
+  const upiNumber = "invalid";
+  const upiID = "invalid";
   const [copyingStates, setCopyingStates] = useState<{
     [key: string]: "idle" | "copying" | "copied";
   }>({});
