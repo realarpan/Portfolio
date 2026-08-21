@@ -151,7 +151,7 @@ export default function Home() {
               Scalability, reliability, and a bit of chaos engineering. Open to
               work - full-time, freelance, or collabs.{" "}
               <Link
-                href="mailto:gaurav@xinacy.com"
+                href="arpanmaity1205@gmail.com"
                 className="text-white underline underline-offset-4 decoration-white/20 hover:decoration-white/60 transition-all"
               >
                 Let&apos;s talk.
