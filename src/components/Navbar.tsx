@@ -9,7 +9,7 @@ const navItems = [
   { label: "Home", href: "/", icon: Home },
   { label: "Work", href: "/work", icon: Briefcase },
   { label: "Resume", href: "/resume", icon: FileText },
-  { label: "Contact", href: "mailto:gaurav@xinacy.com", icon: Mail },
+  { label: "Contact", href: "mailto:arpanmaity1205@gmail.com", icon: Mail },
 ];
 
 export default function Navbar() {
@@ -34,7 +34,7 @@ export default function Navbar() {
           href="/"
           className="text-white font-bold text-lg tracking-tight hover:text-[#00E676] transition-colors"
         >
-          gaurav<span className="text-[#00E676]">.</span>
+          arpan<span className="text-[#00E676]">.</span>
         </Link>
 
         <div className="hidden sm:flex items-center gap-1">
@@ -51,7 +51,7 @@ export default function Navbar() {
         </div>
 
         <Link
-          href="https://github.com/Xinacy"
+          href="https://github.com/realarpan"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 px-3 py-1.5 text-sm text-gray-400 hover:text-white border border-white/10 rounded-lg hover:bg-white/5 hover:border-white/20 transition-all duration-200"
