@@ -264,7 +264,7 @@ export default function Home() {
           <div className="mt-8 rounded-xl border border-white/5 bg-white/2 p-5">
             <div className="flex justify-center overflow-x-auto">
               <GitHubCalendar
-                username="Xinacy"
+                username="realarpan"
                 blockSize={11}
                 blockMargin={3}
                 colorScheme="dark"
