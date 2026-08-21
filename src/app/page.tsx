@@ -22,7 +22,7 @@ import { CometCard } from "@/components/ui/comet-card";
 
 const socials = [
   { icon: GithubIcon, href: "https://github.com/realarpan", label: "GitHub" },
-  { icon: XIcon, href: "https://x.com/Xinacy", label: "X" },
+  { icon: XIcon, href: "https://x.com/invalid", label: "X" },
   {
     icon: LinkedinIcon,
     href: "https://linkedin.com/in/invalid",
