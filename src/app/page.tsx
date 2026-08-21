@@ -21,21 +21,21 @@ import TechIcon from "@/components/TechIcon";
 import { CometCard } from "@/components/ui/comet-card";
 
 const socials = [
-  { icon: GithubIcon, href: "https://github.com/Xinacy", label: "GitHub" },
+  { icon: GithubIcon, href: "https://github.com/realarpan", label: "GitHub" },
   { icon: XIcon, href: "https://x.com/Xinacy", label: "X" },
   {
     icon: LinkedinIcon,
-    href: "https://linkedin.com/in/Xinacy",
+    href: "https://linkedin.com/in/invalid",
     label: "LinkedIn",
   },
   {
     icon: DiscordIcon,
-    href: "https://discord.com/users/1211202988518146050",
+    href: "https://discord.com/users/invalid",
     label: "Discord",
   },
   {
     icon: Instagram,
-    href: "https://instagram.com/Xiinacy",
+    href: "https://instagram.com/invalid",
     label: "Instagram",
   },
 ];
@@ -81,7 +81,7 @@ export default function Home() {
               <div>
                 <div className="flex items-center gap-3">
                   <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
-                    Gaurav, 21
+                    Arpan
                   </h1>
                 </div>
                 <p className="mt-1.5 text-base text-gray-400 font-medium flex items-center gap-2">
@@ -109,7 +109,7 @@ export default function Home() {
                 ))}
                 <div className="w-px h-5 bg-white/10 mx-1" />
                 <Link
-                  href="mailto:gaurav@xinacy.com"
+                  href="mailto:arpanmaity1205@gmail.com"
                   className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium bg-white text-black rounded-lg hover:bg-gray-200 transition-colors"
                 >
                   <Send className="size-3" />
@@ -296,7 +296,7 @@ export default function Home() {
                 More
               </div>
               <Link
-                href="https://github.com/Xinacy"
+                href="https://github.com/realarpan"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-medium border border-white/10 text-gray-500 rounded-lg hover:bg-white/5 hover:text-white transition-all"
@@ -319,7 +319,7 @@ export default function Home() {
             </p>
             <div className="mt-4 flex w-full justify-center sm:mt-0 sm:w-auto sm:justify-end">
               <Link
-                href="mailto:gaurav@xinacy.com"
+                href="mailto:arpanmaity1205@gmail.com"
                 className="group inline-flex cursor-pointer items-center self-end rounded-md border border-dashed border-black/20 bg-black/5 px-2 py-1 text-sm shadow-[0_0_5px_rgba(0,0,0,0.1)] transition-all dark:border-white/30 dark:bg-white/15 dark:text-white dark:shadow-[0_0_5px_rgba(255,255,255,0.1)]"
               >
                 <div className="relative z-20 flex items-center gap-2 transition-all duration-300 group-hover:gap-8">
@@ -360,7 +360,7 @@ export default function Home() {
             contribute.
           </p>
           <Link
-            href="https://github.com/Xinacy/Portfolio"
+            href="https://github.com/realarpan/Portfolio"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs border border-white/8 text-gray-500 rounded-lg hover:bg-white/5 hover:text-white transition-all"
@@ -371,7 +371,7 @@ export default function Home() {
           <div className="flex items-center justify-center gap-1.5 text-gray-700 text-[11px] pt-1">
             <span>Made with</span>
             <Heart className="size-2.5 text-red-500 hover:fill-current hover:cursor-pointer" />
-            <span>by Gaurav</span>
+            <span>by Arpan</span>
           </div>
         </div>
       </footer>
