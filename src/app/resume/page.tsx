@@ -134,7 +134,7 @@ export default function ResumePage() {
                 Confidential
               </h3>
               <p className="text-gray-400">
-                High School · Kolkata · 2024
+                Higher Education · Kolkata · 2024
               </p>
             </div>
           </section>
