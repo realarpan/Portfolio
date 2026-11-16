@@ -18,6 +18,7 @@ import { GithubIcon, DiscordIcon, XIcon, LinkedinIcon } from "@/icons";
 import GitHubCalendar from "react-github-calendar";
 import { work, skills } from "@/lib/resume";
 import TechIcon from "@/components/TechIcon";
+import PresenceStatus from "@/components/PresenceStatus";
 import { CometCard } from "@/components/ui/comet-card";
 
 const socials = [
@@ -83,23 +84,7 @@ export default function Home() {
                   <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
                     Arpan
                   </h1>
-                  <span
-                    title="Profile status"
-                    className="inline-flex items-center gap-2 rounded-full border border-emerald-300/15 bg-emerald-300/[0.06] px-3 py-1.5 text-[10px] font-medium tracking-wide text-emerald-100/90 shadow-[0_0_24px_rgba(52,211,153,0.06)] backdrop-blur-xl"
-                  >
-                    <span className="relative flex size-1.5">
-                      <span className="absolute inline-flex size-full rounded-full bg-emerald-300 opacity-40" />
-                      <span className="relative inline-flex size-1.5 rounded-full bg-emerald-300" />
-                    </span>
-                    Available · Open to opportunities
-                  </span>
-                  <span
-                    title="Manually displayed profile activity status"
-                    className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.035] px-3 py-1.5 text-[10px] font-medium tracking-wide text-gray-400 backdrop-blur-xl"
-                  >
-                    <span className="size-1 rounded-full bg-emerald-400/80" />
-                    Last seen: Recently
-                  </span>
+                  <PresenceStatus />
                 </div>
                 <p className="mt-1.5 text-base text-gray-400 font-medium flex items-center gap-2">
                   <Terminal className="size-4 text-gray-500" />
