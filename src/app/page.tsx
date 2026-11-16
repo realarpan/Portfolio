@@ -79,10 +79,20 @@ export default function Home() {
 
             <div className="flex-1 space-y-4">
               <div>
-                <div className="flex items-center gap-3">
+                <div className="flex flex-wrap items-center gap-3">
                   <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
                     Arpan
                   </h1>
+                  <span
+                    title="Available for opportunities"
+                    className="inline-flex items-center gap-2 rounded-full border border-emerald-300/15 bg-emerald-300/[0.06] px-3 py-1.5 text-[10px] font-medium tracking-wide text-emerald-100/90 shadow-[0_0_24px_rgba(52,211,153,0.06)] backdrop-blur-xl"
+                  >
+                    <span className="relative flex size-1.5">
+                      <span className="absolute inline-flex size-full rounded-full bg-emerald-300 opacity-40" />
+                      <span className="relative inline-flex size-1.5 rounded-full bg-emerald-300" />
+                    </span>
+                    Available · Open to opportunities
+                  </span>
                 </div>
                 <p className="mt-1.5 text-base text-gray-400 font-medium flex items-center gap-2">
                   <Terminal className="size-4 text-gray-500" />
