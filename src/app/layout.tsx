@@ -12,10 +12,10 @@ import FloatingDonateButton from "@/components/FloatingDonateButton";
 
 const fontSans = FontSans({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-geist-sans",
 });
 
-export const viewport: Viewport = { themeColor: "#00E676" };
+export const viewport: Viewport = { themeColor: "#0b0e1c" };
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://arpanx.vercel.app/"),
