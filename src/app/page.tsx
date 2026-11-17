@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  ArrowDownRight, ArrowUpRight, BriefcaseBusiness, Code2, Heart,
+  ArrowDownRight, ArrowUpRight, BriefcaseBusiness, Code2, Heart, Instagram,
   MapPin, Send, Sparkles, Terminal, Wrench, Github, Star
 } from "lucide-react";
 import { GithubIcon, DiscordIcon, XIcon, LinkedinIcon } from "@/icons";
@@ -17,7 +17,7 @@ const socials = [
   { icon: XIcon, href: "https://x.com/invalid", label: "X" },
   { icon: LinkedinIcon, href: "https://linkedin.com/in/invalid", label: "LinkedIn" },
   { icon: DiscordIcon, href: "https://discord.com/users/invalid", label: "Discord" },
-  { icon: require("lucide-react").Instagram, href: "https://instagram.com/invalid", label: "Instagram" },
+  { icon: Instagram, href: "https://instagram.com/invalid", label: "Instagram" },
 ];
 
 const statusLabels: Record<string, string> = {
