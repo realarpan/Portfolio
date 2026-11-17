@@ -7,7 +7,7 @@ import {
   motion, useReducedMotion
 } from "motion/react";
 import {
-  ArrowDown, ArrowDownRight, ArrowUpRight, BriefcaseBusiness, Code2,
+  ArrowDown, ArrowUpRight, BriefcaseBusiness, Code2,
   Github, Heart, Instagram, MapPin, Send, Sparkles, Terminal, Wrench,
   Star, Activity
 } from "lucide-react";
@@ -122,7 +122,6 @@ export default function Home() {
 
             <Reveal className="premium-portrait-wrap" delay={0.18}>
               <motion.div className="premium-portrait-shell" whileHover={reduced ? undefined : { y: -7, rotate: -1 }} transition={{ type: "spring", stiffness: 180, damping: 20 }}>
-                <div className="premium-portrait-top"><span><i /> PERSONAL SPACE</span><span>01 — 04</span></div>
                 <div className="premium-portrait-image">
                   <Image
                     src="https://cdn.xinacy.com/spidey.jpg"
@@ -135,13 +134,7 @@ export default function Home() {
                   />
                   <div className="premium-portrait-image-shade" />
                 </div>
-                <div className="premium-portrait-caption"><span>BUILD. SHIP. IMPROVE.</span><span>CREATIVE ENGINEERING</span></div>
               </motion.div>
-              <motion.div className="premium-photo-chip" animate={reduced ? undefined : { y: [0, -7, 0] }} transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}>
-                <span className="premium-photo-chip-icon"><Code2 size={17} /></span>
-                <span><strong>From idea to production</strong><small>Thoughtful by default.</small></span>
-              </motion.div>
-              <span className="premium-portrait-index">FIG. 01 / ARPAN</span>
             </Reveal>
           </div>
           <div className="premium-hero-foot"><span>Backend-first engineer</span><span className="premium-foot-line" /><span>Building useful things with care</span><ArrowDown size={14} /></div>
