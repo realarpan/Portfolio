@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowDownRight, ArrowUpRight, BriefcaseBusiness, Code2, Heart, Instagram,
-  MapPin, Send, Sparkles, Terminal, Wrench, Github, Star
+  MapPin, Send, Sparkles, Terminal, Wrench, Star
 } from "lucide-react";
 import { GithubIcon, DiscordIcon, XIcon, LinkedinIcon } from "@/icons";
 import GitHubCalendar from "react-github-calendar";
