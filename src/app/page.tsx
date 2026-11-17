@@ -7,7 +7,7 @@ import {
   motion, useReducedMotion
 } from "motion/react";
 import {
-  ArrowUpRight, Heart, Instagram, MapPin, Send, Terminal,
+  ArrowDown, ArrowUpRight, BriefcaseBusiness, Github, Heart, Instagram, MapPin, Send, Sparkles, Terminal, Wrench,
   Star, Activity
 } from "lucide-react";
 import { GithubIcon, DiscordIcon, XIcon, LinkedinIcon } from "@/icons";
@@ -89,6 +89,9 @@ export default function Home() {
         <div className="premium-container">
           <div className="premium-hero-grid">
             <div className="premium-hero-copy">
+              <Reveal>
+                <div className="premium-eyebrow"><span className="premium-eyebrow-pulse" /> INDEPENDENT SOFTWARE ENGINEER <span className="premium-eyebrow-year">/ 2026</span></div>
+              </Reveal>
               <Reveal delay={0.08}>
                 <div className="premium-name-line">
                   <h1>Arpan<span>.</span></h1>
@@ -133,13 +136,14 @@ export default function Home() {
               </motion.div>
             </Reveal>
           </div>
+          <div className="premium-hero-foot"><span>Backend-first engineer</span><span className="premium-foot-line" /><span>Building useful things with care</span><ArrowDown size={14} /></div>
         </div>
       </section>
 
       <section className="premium-section" id="about">
         <div className="premium-container">
           <div className="premium-about-grid">
-            <Reveal><h2 className="premium-heading">Thoughtful systems.<br /><em>Useful experiences.</em></h2></Reveal>
+            <Reveal><div className="premium-section-intro"><p className="premium-kicker"><Sparkles size={14} /> A LITTLE ABOUT WHAT I DO</p><h2 className="premium-heading">Thoughtful systems.<br /><em>Useful experiences.</em></h2></div></Reveal>
             <Reveal delay={0.12} className="premium-about-copy">
               <p>Backend-first engineer. Built scalable APIs, payment integrations, microservices, and real-time systems. Did some AI/ML work along the way - inference gateways, fine-tuning pipelines, face recognition - at <strong>MegaLLM</strong> and <strong>Tryzent Technologies</strong>.</p>
               <p>Before that: founded <strong>Flantic</strong> (55M+ users, acquired), co-founded <strong>Quotient</strong> (10M+ users), and built <strong>Mysty</strong> (1M+ users) - all from scratch with Python, FastAPI, PostgreSQL, Redis, and Docker.</p>
@@ -151,7 +155,7 @@ export default function Home() {
 
       <section className="premium-section" id="toolkit">
         <div className="premium-container">
-          <div className="premium-section-heading"><div><h2 className="premium-heading">Skills <em>& tools.</em></h2></div><Link href="/resume" className="premium-text-link">Full résumé <ArrowUpRight size={15} /></Link></div>
+          <div className="premium-section-heading"><div><p className="premium-kicker"><Wrench size={14} /> TECHNOLOGIES I WORK WITH</p><h2 className="premium-heading">Skills <em>& tools.</em></h2></div><Link href="/resume" className="premium-text-link">Full résumé <ArrowUpRight size={15} /></Link></div>
           <div className="premium-skills-grid">
             {skills.map((category, index) => (
               <Reveal key={category.title} delay={index * 0.055}>
@@ -168,7 +172,7 @@ export default function Home() {
 
       <section className="premium-section" id="experience">
         <div className="premium-container">
-          <div className="premium-section-heading"><div><h2 className="premium-heading">Selected <em>work.</em></h2></div><Link href="/work" className="premium-text-link">Explore experience <ArrowUpRight size={15} /></Link></div>
+          <div className="premium-section-heading"><div><p className="premium-kicker"><BriefcaseBusiness size={14} /> PLACES & PRODUCTS</p><h2 className="premium-heading">Selected <em>work.</em></h2></div><Link href="/work" className="premium-text-link">Explore experience <ArrowUpRight size={15} /></Link></div>
           <div className="premium-work-grid">
             {work.map((item, index) => (
               <Reveal key={item.company} delay={index * 0.06}>
@@ -185,7 +189,7 @@ export default function Home() {
 
       <section className="premium-section" id="activity">
         <div className="premium-container">
-          <div className="premium-section-heading"><div><h2 className="premium-heading">A little <em>consistency.</em></h2><p className="premium-muted">Personal account only - company commits cannot be displayed here.</p></div><Link href="https://github.com/realarpan" target="_blank" rel="noopener noreferrer" className="premium-text-link">GitHub profile <ArrowUpRight size={15} /></Link></div>
+          <div className="premium-section-heading"><div><p className="premium-kicker"><Github size={14} /> ACTIVITY LOG</p><h2 className="premium-heading">A little <em>consistency.</em></h2><p className="premium-muted">Personal account only - company commits cannot be displayed here.</p></div><Link href="https://github.com/realarpan" target="_blank" rel="noopener noreferrer" className="premium-text-link">GitHub profile <ArrowUpRight size={15} /></Link></div>
           <Reveal><div className="premium-github-panel"><div className="premium-github-top"><span><Activity size={15} /> Contribution activity</span><span>github.com / realarpan</span></div><div className="premium-calendar"><GitHubCalendar username="realarpan" blockSize={11} blockMargin={3} colorScheme="dark" fontSize={11} theme={{ light: ["#1c211a", "#34442b", "#5a773e", "#91ae5a", "#d0e58c"], dark: ["#1c211a", "#34442b", "#5a773e", "#91ae5a", "#d0e58c"] }} /></div><div className="premium-calendar-legend"><span>Less</span><i /><i /><i /><i /><i /><span>More</span></div></div></Reveal>
         </div>
       </section>
