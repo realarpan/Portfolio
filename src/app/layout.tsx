@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Manrope as FontSans } from "next/font/google";
+import { Geist as FontSans } from "next/font/google";
 import { Provider as JotaiProvider } from "jotai";
 import { Toaster } from "@/components/ui/sonner";
 import "@/app/globals.css";
@@ -15,7 +15,7 @@ const fontSans = FontSans({
   variable: "--font-geist-sans",
 });
 
-export const viewport: Viewport = { themeColor: "#0b0e1c" };
+export const viewport: Viewport = { themeColor: "#090b09" };
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://arpanx.vercel.app/"),
