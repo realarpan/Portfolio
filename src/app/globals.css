@@ -697,3 +697,66 @@ header nav a.hover\\:border-indigo-200\\/30:hover { border-color:rgba(213,237,14
 @media(max-width:680px) {
   .premium-section-heading { margin-bottom:25px; }
 }
+
+
+/* Restore the contextual labels as deliberate, readable hierarchy. */
+.premium-eyebrow {
+  width:fit-content;
+  gap:11px;
+  padding:10px 14px;
+  border:1px solid rgba(213,237,140,.25);
+  border-radius:999px;
+  color:#e0e8c9;
+  background:linear-gradient(110deg,rgba(213,237,140,.11),rgba(255,255,255,.035));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 8px 28px rgba(0,0,0,.16);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.17em;
+}
+.premium-eyebrow-pulse { flex:0 0 8px;width:8px;height:8px; }
+.premium-eyebrow-year { color:#d5ed8c;font-weight:800; }
+.premium-hero-foot {
+  min-height:52px;
+  margin-top:27px;
+  padding:14px 17px;
+  border:1px solid rgba(236,239,222,.12);
+  border-radius:14px;
+  color:#d0d5c3;
+  background:linear-gradient(100deg,rgba(255,255,255,.055),rgba(255,255,255,.018));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.045);
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.095em;
+}
+.premium-hero-foot span:first-child,
+.premium-hero-foot span:nth-of-type(2) { color:#d9ddcf; }
+.premium-hero-foot .premium-foot-line {
+  width:34px;
+  height:2px;
+  border-radius:2px;
+  background:linear-gradient(90deg,#d5ed8c,rgba(213,237,140,.2));
+}
+.premium-hero-foot svg { color:#d5ed8c; }
+.premium-section-intro { display:flex;align-items:flex-start;flex-direction:column;gap:16px; }
+.premium-kicker {
+  width:fit-content;
+  gap:9px;
+  color:#d5ed8c;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.145em;
+  line-height:1.5;
+}
+.premium-kicker svg { width:15px;height:15px;flex:0 0 15px; }
+.premium-about-grid .premium-heading { margin-top:0; }
+.premium-section-heading>div { display:flex;align-items:flex-start;flex-direction:column;gap:13px; }
+.premium-section-heading .premium-heading { margin-top:0; }
+.premium-section-heading .premium-muted { margin-top:-3px; }
+@media(max-width:680px) {
+  .premium-eyebrow { max-width:100%;padding:9px 11px;font-size:9px;letter-spacing:.11em; }
+  .premium-hero-foot { display:flex;flex-wrap:wrap;gap:9px 12px;padding:12px;font-size:9px;letter-spacing:.045em; }
+  .premium-hero-foot .premium-foot-line { width:20px; }
+  .premium-section-intro { gap:13px; }
+  .premium-kicker { font-size:9px;letter-spacing:.11em; }
+  .premium-section-heading>div { gap:11px; }
+}
