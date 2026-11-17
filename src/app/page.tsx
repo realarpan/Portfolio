@@ -1,9 +1,15 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
-  ArrowDownRight, ArrowUpRight, BriefcaseBusiness, Code2, Github, Heart,
-  Instagram, MapPin, Send, Sparkles, Terminal, Wrench, Star,
-  Activity, Braces
+  motion, useReducedMotion
+} from "motion/react";
+import {
+  ArrowDown, ArrowDownRight, ArrowUpRight, BriefcaseBusiness, Code2,
+  Github, Heart, Instagram, MapPin, Send, Sparkles, Terminal, Wrench,
+  Star, Activity, Layers3, Command, Globe2
 } from "lucide-react";
 import { GithubIcon, DiscordIcon, XIcon, LinkedinIcon } from "@/icons";
 import GitHubCalendar from "react-github-calendar";
@@ -20,112 +26,193 @@ const socials = [
 ];
 
 const statusLabels: Record<string, string> = {
-  completed: "Past", discontinued: "Discontinued", acquired: "Acquired",
+  completed: "Past",
+  discontinued: "Discontinued",
+  acquired: "Acquired",
 };
-const statusColor: Record<string, string> = {
-  completed: "status-past", discontinued: "status-paused", acquired: "status-acquired",
+
+const statusClasses: Record<string, string> = {
+  completed: "premium-status premium-status-past",
+  discontinued: "premium-status premium-status-discontinued",
+  acquired: "premium-status premium-status-acquired",
 };
+
+const rise = {
+  hidden: { opacity: 0, y: 28, filter: "blur(8px)" },
+  visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+};
+
+function Reveal({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
+  const reduced = useReducedMotion();
+  return (
+    <motion.div
+      className={className}
+      variants={rise}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.16 }}
+      transition={{ duration: reduced ? 0 : 0.72, delay, ease: [0.22, 1, 0.36, 1] }}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
+function CompanyLogo({ company, logo }: { company: string; logo: string }) {
+  const [failed, setFailed] = useState(false);
+  return (
+    <div className="premium-company-logo">
+      {!failed ? (
+        <Image
+          src={`https://cdn.xinacy.com/${logo}`}
+          alt={`${company} logo`}
+          width={56}
+          height={56}
+          unoptimized
+          onError={() => setFailed(true)}
+          className="premium-company-logo-image"
+        />
+      ) : (
+        <span aria-label={`${company} logo unavailable`}>{company.slice(0, 1)}</span>
+      )}
+    </div>
+  );
+}
 
 export default function Home() {
+  const reduced = useReducedMotion();
   return (
-    <main className="home-page min-h-screen text-white">
-      <section className="home-hero">
-        <div className="hero-glow hero-glow-a" />
-        <div className="hero-glow hero-glow-b" />
-        <div className="home-wrap">
-          <div className="hero-grid">
-            <div className="hero-copy reveal-up">
-              <div className="hero-eyebrow"><span className="hero-eyebrow-dot" /> Personal portfolio <span className="hero-eyebrow-line" /> 2026</div>
-              <div className="hero-name-row">
-                <h1>Arpan<span className="hero-period">.</span></h1>
-                <PresenceStatus />
-              </div>
-              <p className="hero-role"><Terminal className="size-4" /> Software Engineer <span className="hero-role-divider" /> <MapPin className="size-3.5" /> India</p>
-              <p className="hero-intro">I like owning the path from fuzzy problem to something people can actually use — quick iteration, clear tradeoffs, and the small touches that make an app feel intentional instead of merely functional.</p>
-              <div className="hero-actions">
-                <Link href="mailto:arpanmaity1205@gmail.com" className="hero-primary">Get in touch <ArrowUpRight className="size-4" /></Link>
-                <Link href="/resume" className="hero-secondary">View résumé <ArrowUpRight className="size-4" /></Link>
-              </div>
-              <div className="hero-socials" aria-label="Social profiles">
-                {socials.map((s) => <Link key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label} className="social-link"><s.icon className="size-4" /></Link>)}
-              </div>
+    <main className="premium-home">
+      <div className="premium-noise" aria-hidden="true" />
+      <section className="premium-hero" id="home">
+        <div className="premium-hero-glow premium-hero-glow-one" />
+        <div className="premium-hero-glow premium-hero-glow-two" />
+        <div className="premium-container">
+          <div className="premium-hero-grid">
+            <div className="premium-hero-copy">
+              <Reveal>
+                <div className="premium-eyebrow"><span className="premium-eyebrow-pulse" /> INDEPENDENT SOFTWARE ENGINEER <span className="premium-eyebrow-year">/ 2026</span></div>
+              </Reveal>
+              <Reveal delay={0.08}>
+                <div className="premium-name-line">
+                  <h1>Arpan<span>.</span></h1>
+                  <PresenceStatus />
+                </div>
+              </Reveal>
+              <Reveal delay={0.15}>
+                <p className="premium-role"><Terminal size={15} /> Software Engineer <i /> <MapPin size={14} /> India</p>
+              </Reveal>
+              <Reveal delay={0.22}>
+                <p className="premium-intro">I like owning the path from fuzzy problem to something people can actually use — quick iteration, clear tradeoffs, and the small touches that make an app feel intentional instead of merely functional.</p>
+              </Reveal>
+              <Reveal delay={0.29}>
+                <div className="premium-actions">
+                  <Link href="mailto:arpanmaity1205@gmail.com" className="premium-button-primary">Get in touch <ArrowUpRight size={16} /></Link>
+                  <Link href="/resume" className="premium-button-quiet">View résumé <ArrowUpRight size={15} /></Link>
+                </div>
+                <div className="premium-socials" aria-label="Social profiles">
+                  {socials.map((social, i) => (
+                    <motion.div key={social.label} whileHover={reduced ? undefined : { y: -4, scale: 1.05 }} transition={{ type: "spring", stiffness: 420, damping: 18 }}>
+                      <Link href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label} className="premium-social"><social.icon size={16} /></Link>
+                    </motion.div>
+                  ))}
+                </div>
+              </Reveal>
             </div>
 
-            <div className="hero-visual reveal-up reveal-delay-2" aria-label="Creative engineering visual">
-              <div className="visual-orbit visual-orbit-one" />
-              <div className="visual-orbit visual-orbit-two" />
-              <div className="visual-grid" />
-              <div className="visual-card">
-                <div className="visual-card-top"><span className="visual-live"><i /> SYSTEMS ONLINE</span><span className="visual-card-index">01 / 04</span></div>
-                <div className="visual-monogram">A<span>.</span></div>
-                <div className="visual-code">
-                  <div><span className="code-muted">const</span> mindset = <span className="code-purple">"build"</span>;</div>
-                  <div><span className="code-muted">const</span> process = [</div>
-                  <div className="code-indent"><span className="code-blue">"design"</span>, <span className="code-blue">"ship"</span>,</div>
-                  <div className="code-indent"><span className="code-blue">"improve"</span></div>
-                  <div>];</div>
+            <Reveal className="premium-portrait-wrap" delay={0.18}>
+              <motion.div className="premium-portrait-shell" whileHover={reduced ? undefined : { y: -7, rotate: -1 }} transition={{ type: "spring", stiffness: 180, damping: 20 }}>
+                <div className="premium-portrait-top"><span><i /> PERSONAL SPACE</span><span>01 — 04</span></div>
+                <div className="premium-portrait-image">
+                  <Image
+                    src="https://cdn.xinacy.com/spidey.jpg"
+                    alt="Spider-Man artwork from Arpan's portfolio"
+                    fill
+                    priority
+                    unoptimized
+                    sizes="(max-width: 760px) 86vw, 430px"
+                    className="object-cover object-center"
+                  />
+                  <div className="premium-portrait-image-shade" />
                 </div>
-                <div className="visual-card-bottom"><span>CREATIVE ENGINEERING</span><span><Braces className="size-3.5" /> 2026</span></div>
-              </div>
-              <div className="hero-floating-note"><span className="hero-note-icon"><Code2 className="size-4" /></span><span><strong>Build. Ship. Improve.</strong><small>From idea to production</small></span><ArrowUpRight className="note-arrow size-4" /></div>
-              <span className="hero-visual-caption">INDEPENDENT BY DESIGN / 01</span>
-            </div>
+                <div className="premium-portrait-caption"><span>BUILD. SHIP. IMPROVE.</span><span>CREATIVE ENGINEERING</span></div>
+              </motion.div>
+              <motion.div className="premium-photo-chip" animate={reduced ? undefined : { y: [0, -7, 0] }} transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}>
+                <span className="premium-photo-chip-icon"><Code2 size={17} /></span>
+                <span><strong>From idea to production</strong><small>Thoughtful by default.</small></span>
+              </motion.div>
+              <span className="premium-portrait-index">FIG. 01 / ARPAN</span>
+            </Reveal>
           </div>
-          <div className="hero-bottomline"><span>Backend-first engineer</span><span className="hero-bottomline-rule" /><span>Building useful things with care</span><ArrowDownRight className="size-4" /></div>
+          <div className="premium-hero-foot"><span>Backend-first engineer</span><span className="premium-foot-line" /><span>Building useful things with care</span><ArrowDown size={14} /></div>
         </div>
       </section>
 
-      <section className="home-section home-about" id="about">
-        <div className="home-wrap">
-          <div className="section-topline"><span className="section-index">01 / ABOUT</span><span className="section-rule" /></div>
-          <div className="about-grid">
-            <div className="reveal-up"><p className="section-overline"><Sparkles className="size-3.5" /> A little about what I do</p><h2 className="section-title">Thoughtful systems.<br /><span>Useful experiences.</span></h2></div>
-            <div className="about-copy reveal-up reveal-delay-1">
+      <section className="premium-section" id="about">
+        <div className="premium-container">
+          <div className="premium-section-meta"><span>01</span><span>ABOUT</span><i /></div>
+          <div className="premium-about-grid">
+            <Reveal><p className="premium-kicker"><Sparkles size={14} /> A LITTLE ABOUT WHAT I DO</p><h2 className="premium-heading">Thoughtful systems.<br /><em>Useful experiences.</em></h2></Reveal>
+            <Reveal delay={0.12} className="premium-about-copy">
               <p>Backend-first engineer. Built scalable APIs, payment integrations, microservices, and real-time systems. Did some AI/ML work along the way - inference gateways, fine-tuning pipelines, face recognition - at <strong>MegaLLM</strong> and <strong>Tryzent Technologies</strong>.</p>
               <p>Before that: founded <strong>Flantic</strong> (55M+ users, acquired), co-founded <strong>Quotient</strong> (10M+ users), and built <strong>Mysty</strong> (1M+ users) - all from scratch with Python, FastAPI, PostgreSQL, Redis, and Docker.</p>
-              <p>Scalability, reliability, and a bit of chaos engineering. Open to work - full-time, freelance, or collabs. <Link href="mailto:arpanmaity1205@gmail.com">Let&apos;s talk <ArrowUpRight className="inline size-3.5" /></Link></p>
-            </div>
+              <p>Scalability, reliability, and a bit of chaos engineering. Open to work - full-time, freelance, or collabs. <Link href="mailto:arpanmaity1205@gmail.com">Let&apos;s talk <ArrowUpRight size={14} /></Link></p>
+            </Reveal>
           </div>
         </div>
       </section>
 
-      <section className="home-section" id="toolkit">
-        <div className="home-wrap">
-          <div className="section-topline"><span className="section-index">02 / TOOLKIT</span><span className="section-rule" /></div>
-          <div className="section-heading-row"><div><p className="section-overline"><Wrench className="size-3.5" /> Technologies I work with</p><h2 className="section-title">Skills <span>& tools.</span></h2></div><Link href="/resume" className="section-link">Full résumé <ArrowUpRight className="size-4" /></Link></div>
-          <div className="skills-grid">
-            {skills.map((category, i) => <article key={category.title} className="skill-card reveal-up" style={{ animationDelay: `${i * 75}ms` }}><div className="skill-card-top"><span className="skill-number">0{i + 1}</span><span className="skill-count">{category.items.length} tools</span></div><h3>{category.title}</h3><div className="skill-tags">{category.items.map((name) => <span key={name} className="skill-tag"><TechIcon name={name} className="size-4 shrink-0" />{name}</span>)}</div></article>)}
+      <section className="premium-section" id="toolkit">
+        <div className="premium-container">
+          <div className="premium-section-meta"><span>02</span><span>TOOLKIT</span><i /></div>
+          <div className="premium-section-heading"><div><p className="premium-kicker"><Wrench size={14} /> TECHNOLOGIES I WORK WITH</p><h2 className="premium-heading">Skills <em>& tools.</em></h2></div><Link href="/resume" className="premium-text-link">Full résumé <ArrowUpRight size={15} /></Link></div>
+          <div className="premium-skills-grid">
+            {skills.map((category, index) => (
+              <Reveal key={category.title} delay={index * 0.055}>
+                <motion.article className="premium-skill-card" whileHover={reduced ? undefined : { y: -5 }} transition={{ type: "spring", stiffness: 260, damping: 22 }}>
+                  <div className="premium-card-meta"><span>0{index + 1} / 06</span><span>{category.items.length} TOOLS</span></div>
+                  <h3>{category.title}</h3>
+                  <div className="premium-tech-list">{category.items.map((name) => <span className="premium-tech-pill" key={name}><TechIcon name={name} className="size-4 shrink-0" />{name}</span>)}</div>
+                </motion.article>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="home-section" id="experience">
-        <div className="home-wrap">
-          <div className="section-topline"><span className="section-index">03 / EXPERIENCE</span><span className="section-rule" /></div>
-          <div className="section-heading-row"><div><p className="section-overline"><BriefcaseBusiness className="size-3.5" /> Places & products</p><h2 className="section-title">Selected <span>work.</span></h2></div><Link href="/work" className="section-link">Explore experience <ArrowUpRight className="size-4" /></Link></div>
-          <div className="work-grid">
-            {work.map((item, index) => <article key={item.company} className="home-work-card reveal-up" style={{ animationDelay: `${index * 75}ms` }}>
-              <div className="work-card-top"><span className="work-index">0{index + 1}</span>{item.status && <span className={`work-status ${statusColor[item.status] || "status-past"}`}>{statusLabels[item.status] || item.status}</span>}</div>
-              <div className="work-company-row"><div className="company-monogram" aria-hidden="true">{item.company.slice(0, 1)}</div><div className="min-w-0"><h3>{item.company}</h3><p>{item.position}</p></div></div>
-              <div className="work-card-bottom"><span>{item.duration}</span><ArrowUpRight className="size-4" /></div>
-            </article>)}
+      <section className="premium-section" id="experience">
+        <div className="premium-container">
+          <div className="premium-section-meta"><span>03</span><span>EXPERIENCE</span><i /></div>
+          <div className="premium-section-heading"><div><p className="premium-kicker"><BriefcaseBusiness size={14} /> PLACES & PRODUCTS</p><h2 className="premium-heading">Selected <em>work.</em></h2></div><Link href="/work" className="premium-text-link">Explore experience <ArrowUpRight size={15} /></Link></div>
+          <div className="premium-work-grid">
+            {work.map((item, index) => (
+              <Reveal key={item.company} delay={index * 0.06}>
+                <motion.article className="premium-work-card" whileHover={reduced ? undefined : { y: -5 }} transition={{ type: "spring", stiffness: 260, damping: 22 }}>
+                  <div className="premium-work-top"><span className="premium-card-number">0{index + 1}</span><span className={statusClasses[item.status] || "premium-status premium-status-past"}>{statusLabels[item.status] || item.status}</span></div>
+                  <div className="premium-company-row"><CompanyLogo company={item.company} logo={item.logo} /><div className="premium-company-info"><h3>{item.company}</h3><p>{item.position}</p></div></div>
+                  <div className="premium-work-bottom"><span>{item.duration}</span><ArrowUpRight size={16} /></div>
+                </motion.article>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="home-section home-github" id="activity">
-        <div className="home-wrap">
-          <div className="section-topline"><span className="section-index">04 / OPEN SOURCE</span><span className="section-rule" /></div>
-          <div className="section-heading-row"><div><p className="section-overline"><Github className="size-3.5" /> Activity log</p><h2 className="section-title">A little <span>consistency.</span></h2><p className="section-description">Personal account only - company commits cannot be displayed here.</p></div><Link href="https://github.com/realarpan" target="_blank" rel="noopener noreferrer" className="section-link">GitHub profile <ArrowUpRight className="size-4" /></Link></div>
-          <div className="github-panel"><div className="github-panel-heading"><span><Activity className="size-4" /> Contribution activity</span><span>github.com / realarpan</span></div><div className="github-calendar"><GitHubCalendar username="realarpan" blockSize={11} blockMargin={3} colorScheme="dark" fontSize={11} theme={{ light: ["#171a2a", "#252c54", "#384b9a", "#566ee0", "#a4b3ff"], dark: ["#171a2a", "#252c54", "#384b9a", "#566ee0", "#a4b3ff"] }} /></div><div className="github-legend"><span>Less</span><i /><i /><i /><i /><i /><span>More</span></div></div>
+      <section className="premium-section" id="activity">
+        <div className="premium-container">
+          <div className="premium-section-meta"><span>04</span><span>OPEN SOURCE</span><i /></div>
+          <div className="premium-section-heading"><div><p className="premium-kicker"><Github size={14} /> ACTIVITY LOG</p><h2 className="premium-heading">A little <em>consistency.</em></h2><p className="premium-muted">Personal account only - company commits cannot be displayed here.</p></div><Link href="https://github.com/realarpan" target="_blank" rel="noopener noreferrer" className="premium-text-link">GitHub profile <ArrowUpRight size={15} /></Link></div>
+          <Reveal><div className="premium-github-panel"><div className="premium-github-top"><span><Activity size={15} /> Contribution activity</span><span>github.com / realarpan</span></div><div className="premium-calendar"><GitHubCalendar username="realarpan" blockSize={11} blockMargin={3} colorScheme="dark" fontSize={11} theme={{ light: ["#1c211a", "#34442b", "#5a773e", "#91ae5a", "#d0e58c"], dark: ["#1c211a", "#34442b", "#5a773e", "#91ae5a", "#d0e58c"] }} /></div><div className="premium-calendar-legend"><span>Less</span><i /><i /><i /><i /><i /><span>More</span></div></div></Reveal>
         </div>
       </section>
 
-      <section className="home-contact">
-        <div className="home-wrap"><div className="contact-panel"><div><p className="section-overline"><Send className="size-3.5" /> HAVE A PROJECT IN MIND?</p><h2>Let&apos;s make<br /><span>something matter.</span></h2><p>Hey, you scrolled this far, let&apos;s talk.</p></div><Link href="mailto:arpanmaity1205@gmail.com" className="contact-cta">Shoot a message <ArrowUpRight className="size-5" /></Link><div className="contact-orb" /></div></div>
+      <section className="premium-contact">
+        <div className="premium-container">
+          <Reveal><div className="premium-contact-card"><div className="premium-contact-orbit" /><div className="premium-contact-copy"><p className="premium-kicker"><Send size={14} /> HAVE A PROJECT IN MIND?</p><h2>Let&apos;s make<br /><em>something matter.</em></h2><p>Hey, you scrolled this far, let&apos;s talk.</p></div><Link href="mailto:arpanmaity1205@gmail.com" className="premium-contact-button">Shoot a message <ArrowUpRight size={18} /></Link></div></Reveal>
+        </div>
       </section>
 
-      <footer className="home-footer"><div className="home-wrap footer-inner"><div><span className="footer-brand">arpan<span>.</span></span><p>This portfolio is open source. Feel free to star, fork, or contribute.</p></div><div className="footer-right"><Link href="https://github.com/realarpan/Portfolio" target="_blank" rel="noopener noreferrer" className="footer-star"><Star className="size-3.5" /> Star on GitHub</Link><span>Made with <Heart className="inline size-3 text-rose-300" /> by Arpan</span></div></div></footer>
+      <footer className="premium-footer"><div className="premium-container premium-footer-inner"><div><span className="premium-footer-brand">arpan<span>.</span></span><p>This portfolio is open source. Feel free to star, fork, or contribute.</p></div><div className="premium-footer-right"><Link href="https://github.com/realarpan/Portfolio" target="_blank" rel="noopener noreferrer"><Star size={14} /> Star on GitHub</Link><span>Made with <Heart size={12} /> by Arpan</span></div></div></footer>
     </main>
   );
 }
