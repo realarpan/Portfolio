@@ -673,3 +673,17 @@ header nav a.hover\\:border-indigo-200\\/30:hover { border-color:rgba(213,237,14
 @media(prefers-reduced-motion:reduce) {
  .premium-home *, .premium-home *::before, .premium-home *::after { animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important; }
 }
+
+
+/* Portrait is intentionally image-only: no floating copy or decorative labels. */
+.premium-portrait-shell { height:470px; padding:12px; }
+.premium-portrait-image { height:444px; border-radius:21px; }
+.premium-portrait-image-shade { background:linear-gradient(180deg,rgba(8,10,7,.02),rgba(8,10,7,.12)); }
+@media(max-width:900px) {
+  .premium-portrait-shell { height:430px; }
+  .premium-portrait-image { height:404px; }
+}
+@media(max-width:680px) {
+  .premium-portrait-shell { height:410px; }
+  .premium-portrait-image { height:384px; }
+}
