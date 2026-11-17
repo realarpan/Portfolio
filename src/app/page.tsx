@@ -7,7 +7,7 @@ import {
   motion, useReducedMotion
 } from "motion/react";
 import {
-  ArrowDown, ArrowUpRight, BriefcaseBusiness, Code2,
+  ArrowDown, ArrowUpRight, BriefcaseBusiness,
   Github, Heart, Instagram, MapPin, Send, Sparkles, Terminal, Wrench,
   Star, Activity
 } from "lucide-react";
