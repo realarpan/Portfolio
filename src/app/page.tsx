@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import {
   ArrowDownRight, ArrowUpRight, BriefcaseBusiness, Code2, Github, Heart,
-  Instagram, MapPin, Send, Sparkles, Terminal, Wrench, Star, Layers,
+  Instagram, MapPin, Send, Sparkles, Terminal, Wrench, Star,
   Activity, Cpu, Braces
 } from "lucide-react";
 import { GithubIcon, DiscordIcon, XIcon, LinkedinIcon } from "@/icons";
