@@ -3,7 +3,7 @@ import Link from "next/link";
 import {
   ArrowDownRight, ArrowUpRight, BriefcaseBusiness, Code2, Github, Heart,
   Instagram, MapPin, Send, Sparkles, Terminal, Wrench, Star,
-  Activity, Cpu, Braces
+  Activity, Braces
 } from "lucide-react";
 import { GithubIcon, DiscordIcon, XIcon, LinkedinIcon } from "@/icons";
 import GitHubCalendar from "react-github-calendar";
