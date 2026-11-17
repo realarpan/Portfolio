@@ -687,3 +687,13 @@ header nav a.hover\\:border-indigo-200\\/30:hover { border-color:rgba(213,237,14
   .premium-portrait-shell { height:410px; }
   .premium-portrait-image { height:384px; }
 }
+
+
+/* Cleaner hierarchy after removing redundant eyebrow and section labels. */
+.premium-about-grid .premium-heading,
+.premium-section-heading .premium-heading { margin-top:0; }
+.premium-about-grid { align-items:start; }
+.premium-section-heading { margin-bottom:32px; }
+@media(max-width:680px) {
+  .premium-section-heading { margin-bottom:25px; }
+}
