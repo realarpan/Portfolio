@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter as FontSans } from "next/font/google";
+import { Manrope as FontSans } from "next/font/google";
 import { Provider as JotaiProvider } from "jotai";
 import { Toaster } from "@/components/ui/sonner";
 import "@/app/globals.css";
