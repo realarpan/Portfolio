@@ -9,7 +9,7 @@ import {
 import {
   ArrowDown, ArrowDownRight, ArrowUpRight, BriefcaseBusiness, Code2,
   Github, Heart, Instagram, MapPin, Send, Sparkles, Terminal, Wrench,
-  Star, Activity, Layers3, Command, Globe2
+  Star, Activity
 } from "lucide-react";
 import { GithubIcon, DiscordIcon, XIcon, LinkedinIcon } from "@/icons";
 import GitHubCalendar from "react-github-calendar";
@@ -111,7 +111,7 @@ export default function Home() {
                   <Link href="/resume" className="premium-button-quiet">View résumé <ArrowUpRight size={15} /></Link>
                 </div>
                 <div className="premium-socials" aria-label="Social profiles">
-                  {socials.map((social, i) => (
+                  {socials.map((social) => (
                     <motion.div key={social.label} whileHover={reduced ? undefined : { y: -4, scale: 1.05 }} transition={{ type: "spring", stiffness: 420, damping: 18 }}>
                       <Link href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label} className="premium-social"><social.icon size={16} /></Link>
                     </motion.div>
