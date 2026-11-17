@@ -7,8 +7,7 @@ import {
   motion, useReducedMotion
 } from "motion/react";
 import {
-  ArrowDown, ArrowUpRight, BriefcaseBusiness,
-  Github, Heart, Instagram, MapPin, Send, Sparkles, Terminal, Wrench,
+  ArrowUpRight, Heart, Instagram, MapPin, Send, Terminal,
   Star, Activity
 } from "lucide-react";
 import { GithubIcon, DiscordIcon, XIcon, LinkedinIcon } from "@/icons";
